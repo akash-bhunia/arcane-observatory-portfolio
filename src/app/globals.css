@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 10 12 18;
+    --foreground: 245 245 245;
+    --muted: 148 163 184;
+    --accent: 254 254 91;
+  }
+
+  body {
+    background-color: rgb(var(--background));
+    color: rgb(var(--foreground));
+    overflow-x: hidden;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(var(--tx, 20px), var(--ty, -20px));
+  }
+}
